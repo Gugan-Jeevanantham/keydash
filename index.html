@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    ...
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+    <div class="logo">
+      <span class="bolt">⚡</span>
+      <span class="brand-a">Key</span><span class="brand-b">Dash</span>
+    </div>
+    <div class="nav-right">
+      <!-- <div class="best-badge"><strong id="bestWpm"></strong></div> -->
+      <div class="theme-toggle">
+        <span>☀️</span>
+        <div class="switch" id="themeSwitch"></div>
+        <span>🌙</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <div class="eyebrow">Typing Speed Test</div>
+      <h1>Type <span>Faster</span>, Improve Daily</h1>
+      <!-- <p>Test your typing speed and accuracy in real time.</p> -->
+    </div>
+
+    <div class="name-settings">
+
+  <!-- Name -->
+  <div class="name-group">
+    <input
+      type="text"
+      id="userName"
+      class="name-input"
+      placeholder="Enter your name"
+      maxlength="20"
+      autocomplete="off"
+    >
+  </div>
+
+  <!-- Time -->
+  <div class="settings">
+    <div class="settings-row">
+      <div class="settings-group">
+        <span class="settings-label">Time</span>
+
+        <button class="pill active" data-duration="15">15s</button>
+        <button class="pill" data-duration="30">30s</button>
+        <button class="pill" data-duration="60">1m</button>
+        <button class="pill" data-duration="120">2m</button>
+        <button class="pill" data-duration="300">5m</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Level -->
+  <div class="settings">
+    <div class="settings-row">
+      <div class="settings-group">
+        <span class="settings-label">Level</span>
+
+        <button class="pill active" data-level="easy">Easy</button>
+        <button class="pill" data-level="medium">Medium</button>
+        <button class="pill" data-level="hard">Hard</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+    <div class="stats">
+      <div class="stat-card" id="tileTime">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <div class="stat-text">
+          <div class="stat-label">Time</div>
+          <div class="stat-value" id="statTime">15s</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+        </div>
+        <div class="stat-text">
+          <div class="stat-label">WPM</div>
+          <div class="stat-value" id="statWpm">0</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.6" fill="currentColor"/></svg>
+        </div>
+        <div class="stat-text">
+          <div class="stat-label">Accuracy</div>
+          <div class="stat-value" id="statAcc">100%</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>
+        </div>
+        <div class="stat-text">
+          <div class="stat-label">Errors</div>
+          <div class="stat-value" id="statErr">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-card">
+      <div class="paragraph" id="paragraph"></div>
+      <div class="type-input-row">
+        <input class="type-input" id="typeInput" type="text" placeholder="Click Start Test, then type here..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" disabled>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="start-btn" id="startBtn">▶ Start Test</button>
+      <div class="tip">💡 Tip: Keep your fingers on the home row and type at a steady pace.</div>
+    </div>
+  </div>
+
+  <div class="overlay" id="resultOverlay">
+    <div class="result-card">
+      <div class="result-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h2 id="resultTitle">Test Complete!</h2>
+      <div class="result-subtitle" id="resultMessage">🙂 Nice effort!</div>
+      <div class="result-grid">
+        <div>
+          <div class="val" id="resultWpmValue">0</div>
+          <div class="lbl">WPM</div>
+        </div>
+        <div>
+          <div class="val" id="resultAccuracy">100%</div>
+          <div class="lbl">ACCURACY</div>
+        </div>
+        <div>
+          <div class="val" id="resultChars"><span class="val-correct">0</span><span class="val-muted">/</span><span class="val-incorrect">0</span></div>
+          <div class="lbl">CHARACTERS</div>
+        </div>
+      </div>
+      <button class="try-again-btn" id="tryAgainBtn">Go Again <span>↺</span></button>
+    </div>
+  </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
